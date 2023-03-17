@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="2600"
+   height="1600"
+   viewBox="0 0 143 88"
+   version="1.1"
+   id="svg42416"
+   sodipodi:docname="rss.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview42418"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.07375"
+     inkscape:cx="406.77966"
+     inkscape:cy="847.45763"
+     inkscape:window-width="2560"
+     inkscape:window-height="1440"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg42416" />
+  <title
+     id="title42407">RSS-color</title>
+  <desc
+     id="desc42409">Created with Sketch.</desc>
+  <defs
+     id="defs42411" />
+  <g
+     id="Icons"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="translate(0,22)">
+    <g
+       id="Color-"
+       transform="translate(-800,-760)"
+       fill="#ff9a00">
+      <path
+         d="m 800.00047,797.71429 c 0,-3.47129 2.8144,-6.28572 6.28565,-6.28572 3.47125,0 6.28565,2.81443 6.28565,6.28572 0,3.47128 -2.8144,6.28571 -6.28565,6.28571 -3.47125,0 -6.28565,-2.81443 -6.28565,-6.28571 z M 844,804 h -8.38034 c 0,-19.64129 -15.97811,-35.61957 -35.61919,-35.61957 V 760 C 824.2615,760 844,779.73871 844,804 Z m -14.66646,0 h -8.38034 c 0,-11.55314 -9.40018,-20.95186 -20.9532,-20.95186 v -8.382 c 16.17454,0 29.33354,13.15915 29.33354,29.33386 z"
+         id="RSS" />
+    </g>
+  </g>
+  <metadata
+     id="metadata43315">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>RSS-color</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     xml:space="preserve"
+     style="font-size:44px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.055"
+     x="61.115921"
+     y="59.554001"
+     id="text43330"><tspan
+       sodipodi:role="line"
+       id="tspan43328"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:44px;font-family:Raleway;-inkscape-font-specification:'Raleway Bold';stroke-width:0.055"
+       x="61.115921"
+       y="59.554001">RSS</tspan></text>
+</svg>

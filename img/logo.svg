@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="2849.7725"
+   height="634.01575"
+   viewBox="0 0 85.493174 19.020472"
+   fill="none"
+   version="1.1"
+   id="svg210"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs214">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11201">
+      <stop
+         style="stop-color:#f7c02d;stop-opacity:1;"
+         offset="0.29830885"
+         id="stop11197" />
+      <stop
+         style="stop-color:#f7c02d;stop-opacity:0.40000579;"
+         offset="1"
+         id="stop11199" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11201"
+       id="linearGradient11948"
+       x1="8.278739"
+       y1="11.999979"
+       x2="15.721279"
+       y2="11.999979"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad"
+       gradientTransform="translate(-2.4897638,-2.4897638)" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview212"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.51221047"
+     inkscape:cx="409.01155"
+     inkscape:cy="817.04694"
+     inkscape:window-width="1278"
+     inkscape:window-height="1408"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg210" />
+  <circle
+     cx="9.5102358"
+     cy="9.5102358"
+     r="9"
+     stroke="#222222"
+     stroke-width="1.2"
+     id="circle208"
+     style="stroke:#b3c6d3;stroke-width:1.02047;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill:#ffffff;fill-opacity:1" />
+  <path
+     d="M 8.7630942,11.136265 7.9543502,10.858194 C 6.7914188,10.458342 6.2099723,10.258423 6.0912665,9.6977122 5.9725605,9.1370012 6.3952672,8.5870192 7.24066,7.4871532 L 9.8906362,4.0394556 C 10.310363,3.4934065 10.52015,3.2203462 10.651748,3.3170498 c 0.131525,0.096668 0.05417,0.4670878 -0.100522,1.2079265 L 9.9789782,7.2654439 c -0.04803,0.230042 -0.07207,0.3451123 -0.03131,0.4356993 0.04076,0.09058 0.1304318,0.121417 0.3097048,0.183057 l 0.808743,0.278071 c 1.162955,0.39986 1.744355,0.599764 1.863106,1.160491 0.118711,0.560688 -0.303993,1.1106948 -1.149386,2.2105618 L 9.1298252,14.98103 c -0.419713,0.54599 -0.629502,0.819061 -0.7611,0.722347 -0.13154,-0.09659 -0.05418,-0.467077 0.100508,-1.207857 l 0.572255,-2.740497 c 0.04803,-0.230042 0.07207,-0.345112 0.03131,-0.435698 -0.04076,-0.09059 -0.130432,-0.12142 -0.309704,-0.18306 z"
+     stroke="#222222"
+     stroke-width="1.07038"
+     id="path206"
+     style="fill:url(#linearGradient11948);fill-opacity:1;stroke:#3080b5;stroke-width:0.566929;stroke-dasharray:none;stroke-opacity:1" />
+  <text
+     xml:space="preserve"
+     style="font-size:13.28px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0.3px;stroke:none;stroke-width:0.03;stroke-opacity:1"
+     x="23.165907"
+     y="13.495317"
+     id="text2434"><tspan
+       sodipodi:role="line"
+       id="tspan2432"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.28px;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.03;stroke-opacity:1"
+       x="23.165907"
+       y="13.495317"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.28px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#3080b5;fill-opacity:1"
+         id="tspan2508">revie<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:1.2px"
+   id="tspan11320">w</tspan></tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.28px;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';fill:#e1a608;fill-opacity:1"
+         id="tspan2510">zap</tspan></tspan></text>
+</svg>

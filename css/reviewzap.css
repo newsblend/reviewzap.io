@@ -1,0 +1,212 @@
+/* light scheme (default) */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #3080b5;
+  --primary-hover: #2a8ed1;
+  --primary-focus: rgba(3, 155, 229, 0.125);
+  --primary-inverse: #FFF;
+  --accent-color: #c3e0f4;
+}
+
+/* dark scheme (auto) */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #3080b5;
+    --primary-hover: #2a8ed1;
+    --primary-focus: rgba(3, 155, 229, 0.25);
+    --primary-inverse: #FFF;
+    --accent-color: #1b3a4f;
+  }
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'),
+       url('../fonts/open-sans-v34-latin-regular.woff') format('woff');
+}
+
+/* open-sans-italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/open-sans-v34-latin-italic.woff2') format('woff2'),
+       url('../fonts/open-sans-v34-latin-italic.woff') format('woff');
+}
+
+/* raleway-600 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('/fonts/raleway-v28-latin-600.woff2') format('woff2'),
+       url('/fonts/raleway-v28-latin-600.woff') format('woff');
+}
+
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --line-height: 1.65;
+  --border-radius: 3px;
+  --form-element-spacing-vertical: 1rem;
+  --form-element-spacing-horizontal: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --font-family: "Raleway", sans-serif;
+  --font-weight: 600;
+}
+
+h1 {
+  --font-size: 2.5rem;
+  --typography-spacing-vertical: 2.5rem;
+}
+
+h2 {
+  --font-size: 2rem;
+  --typography-spacing-vertical: 2rem;
+}
+
+h3 {
+  --font-size: 1.75rem;
+  --typography-spacing-vertical: 1.75rem;
+}
+
+h4 {
+  --font-size: 1.5rem;
+  --typography-spacing-vertical: 1.5rem;
+}
+
+h5 {
+  --font-size: 1.25rem;
+  --typography-spacing-vertical: 1.25rem;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+input[type=button],
+a[role=button] {
+  --font-weight: 400;
+}
+
+[data-tooltip]::after, [data-tooltip]::before, [data-tooltip][data-placement="top"]::after, [data-tooltip][data-placement="top"]::before {
+  white-space: normal !important;
+  width: 300px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1 0 auto;
+}
+
+section {
+  margin: 0;
+  padding: 3em 0;
+}
+
+img {
+  user-select: none;
+}
+
+.accent {
+  background-color: var(--accent-color);
+}
+
+.logos {
+  user-select: none;
+}
+
+.logos img {
+  height: 3em;
+  margin: .5em 1em;
+  filter: grayscale(1);
+  opacity: .5;
+  transition: .25s ease-in-out;
+}
+
+.logos img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logos img {
+    filter: invert(1) grayscale(1) !important;
+  }
+}
+
+.highlights .grid > div {
+  padding: 1.5em;
+}
+
+.highlights img {
+  height: 3em;
+  margin: 1em;
+  opacity: .8;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .highlights img {
+    filter: invert(1) grayscale(1) !important;
+  }
+}
+
+.pricing header {
+  padding: 2em .5em;
+  margin-bottom: 0;
+}
+
+.pricing header h3 {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing main {
+  margin: 1em -1em;
+  flex-grow: 1;
+}
+
+.pricing hr {
+  margin-bottom: 1em;
+}
+
+.pricing footer {
+  padding: 2em .5em;
+  margin-top: 0;
+}
+
+.pricing footer a {
+  width: 100%;
+  max-width: 12em;
+  padding: .5em;
+  margin: 0 auto;
+}
+
+.pricing ul {
+  padding: 0;
+  margin: 0;
+}
+
+.pricing li {
+  list-style: none;
+}
