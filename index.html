@@ -1,69 +1,375 @@
 ---
-layout: default
-title: Reviewzap - no-bullshit review monitoring
 ---
 
-<main style="padding: 0; text-align: center">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <link rel="canonical" href="https://reviewzap.io/" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review triggers for Zapier with Reviewzap</title>
 
-  <section class="container">
-    <hgroup style="margin-bottom: 2.5em">
-      <h1 style="margin-bottom: .3em; line-height: 1.15em">no-bullshit review monitoring</h1>
-      <h3>Get new reviews delivered to your Zapier, Slack, or email in real-time.</h3>
-    </hgroup>
+    <meta name="title" content="Reviewzap">
+    <meta name="description" content="Build Zapier integrations that trigger on incoming reviews for your apps, products, or locations.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Reviewzap">
 
-    <p style="max-width: 800px; margin: 1em auto">
-      Reviewzap keeps an eye on reviews for your apps, products, or businesses, and forwards them as they are published. All marketplaces, all languages.</p>
+    <meta property="og:title" content="Reviewzap">
+    <meta property="og:site_name" content="Reviewzap">
+    <meta property="og:url" content="https://reviewzap.io/">
+    <meta property="og:description" content="Build Zapier integrations that trigger on incoming reviews for your apps, products, or locations.">
+    <meta property="og:type" content="">
+    <meta property="og:image" content="https://reviewzap.io/img/preview.png">
 
-    <p style="margin-bottom: 0">
-      <em>And that's it.</em>
-    </p>
-  </section>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" sizes="any" href="/favicon.svg">
 
-  <section class="container logos muted">
-    <img src="img/logos/amazon.svg">
-    <img src="img/logos/googleplay.svg">
-    <img src="img/logos/appstore.svg">
-    <img src="img/logos/google.svg">
-    <img src="img/logos/yelp.svg">
-    <img src="img/logos/slack.svg">
-    <img src="img/logos/zapier.svg">
-    <img src="img/logos/webhooks.svg">
-    <img src="img/logos/rss.svg">
-  </section>
+    <meta name="msapplication-TileColor" content="#0ea5e9">
+    <meta name="theme-color" content="#ffffff">
 
-  <div style="background-color: var(--table-row-stripped-background-color);">
-    <section class="container highlights">
-      <div class="grid">
-        <div>
-          <img src="img/fast.svg">
-          <h5>fast</h5>
-          <p>Reviews are scanned hourly, and more frequently for products with high review velocity.</p>
+    <link href="/css/aos.css" rel="stylesheet">
+    <link href="/css/reviewzap.css" rel="stylesheet">
+    <script src="/js/aos.js"></script>
+
+    <style>
+      mark {
+        display: inline-block;
+        position: relative;
+        z-index: 0;
+        background: none;
+        color: unset;
+      }
+
+      mark::before {
+        content: "";
+        position: absolute;
+        left: 7%;
+        bottom: 0.02em;
+        width: 100%;
+        height: .3em;
+        transform: skew(-12deg) translateX(-8%);
+        background: #fb7185ff;
+        z-index: -1;
+      }
+
+      mark.dimmed::before {
+        opacity: 50%;
+      }
+    </style>
+  </head>
+  <body class="font-body">
+    <section class="bg-gradient-to-br from-blue-600 to-sky-500 from-5% to-70% py-5">
+        <nav>
+            <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+                <a href="https://reviewzap.io/" class="flex items-center group">
+                    <img src="/img/logo.svg" class="h-6 mr-3 sm:h-9" alt="Reviewzap Logo" />
+                    <span class="text-xl font-bold font-display text-gray-200 group-hover:text-white transition hidden md:inline">reviewzap</span>
+                </a>
+                <div class="flex gap-6 md:gap-12 items-center">
+                  <a href="#pricing" class="text-gray-200 transition hover:text-white">Pricing</a>
+                  <a href="https://app.reviewzap.io/" class="text-gray-200 transition hover:text-white">Sign in</a>
+                  <a href="#pricing" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold py-2 px-4 rounded-full inline-flex items-center">
+                    Get started
+                    <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
+                      <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+            </div>
+        </nav>
+        <div class="grid max-w-screen-xl px-4 pt-12 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="place-self-center lg:col-span-7 text-center max-w-sm md:max-w-md lg:max-w-xl mx-auto lg:ml-0 lg:text-left" data-aos="fade-right">
+              <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl !leading-[1.1] text-gray-100 font-display drop-shadow-lg">
+                The missing
+                <mark class="drop-shadow-lg">review</mark>
+                <mark class="drop-shadow-lg">trigger</mark>
+                for Zapier.
+              </h1>
+                <p class="max-w-2xl mb-6 font-body text-gray-200 lg:mb-8 md:text-lg lg:text-xl">
+                Free up your time by automating your review management and outshine your competition with lightning-fast response times.
+                </p>
+                <a href="#pricing" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold py-2 px-4 rounded-full inline-flex items-center">
+                  Get started
+                  <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
+                    <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+                    </svg>
+                  </span>
+                </a>
+            </div>
+            <div class="mt-8 lg:mt-0 lg:col-span-5 max-w-lg lg:max-w-xl mx-auto">
+                <img src="/img/hero.png" alt="Example zaps" class="transition hover:!-translate-y-1 drop-shadow-xl" data-aos="fade-right" data-aos-delay="100">
+            </div>
         </div>
-        <div>
-          <img src="img/checklist.svg">
-          <h5>simple</h5>
-          <p>You give us the URLs of your apps/products/business pages (or those of the competition you want to watch...), we'll take care of the rest.</p>
-        </div>
-        <div>
-          <img src="img/puzzle.svg">
-          <h5>flexible</h5>
-          <p>Filter by star rating, keywords, language, or length to minimize noise. Missing an integration? <a href="support@reviewzap.io">Shoot us an email!</a></p>
+      <div class="max-w-screen-xl px-4 mx-auto filter brightness-200 opacity-60 mb-12">
+        <div class="grid grid-cols-2 md:grid-cols-5 justify-between grayscale gap-y-2 lg:px-4 mr-4 md:mr-4" data-aos="fade-right" data-aos-delay="200">
+          <img src="img/logos/amazon.svg" alt="Product reviews from Amazon" class="h-10 lg:h-16 mx-auto">
+          <img src="img/logos/googleplay.svg" alt="App reviews from Google Play" class="h-10 lg:h-16 mx-auto">
+          <img src="img/logos/appstore.svg" alt="App reviews from Apple's App Store" class="h-10 lg:h-16 mx-auto">
+          <img src="img/logos/google.svg" alt="Location reviews from Google Maps" class="h-10 lg:h-16 mx-auto">
+          <img src="img/logos/yelp.svg" alt="Location reviews from Yelp" class="h-10 lg:h-16 mx-auto col-span-2 md:col-span-1">
         </div>
       </div>
     </section>
-  </div>
-
-  <div class="accent">
-    <section class="container">
-      <div>
-      <h4>Begin staying in the loop with Reviewzap today</h4>
-
-      <p style="margin: 2em 0">
-        Your first two weeks are on us.</p>
-
-      <a href="/beta/" role="button" class="secondary" style="margin-bottom: .3em; line-height: 1em">Start free trial</a>
+    <section class="bg-white dark:bg-gray-900">
+      <div class="max-w-screen-xl px-6 py-20 lg:py-32 mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24 text-center">
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h1 class="mb-4 text-xl lg:text-3xl font-display font-bold tracking-tight text-gray-900 dark:text-white leading-tight"><mark>10x faster</mark> than the competition</h1>
+          <p class="font-light lg:text-xl text-gray-800 dark:text-gray-300">
+          Receive your reviews as real-time as it gets. Your zaps are <strong>triggered within five minutes</strong> after a review is published.
+          </p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h1 class="mb-4 text-xl lg:text-3xl font-display font-bold tracking-tight text-gray-900 dark:text-white leading-tight"><mark>All languages,</mark> all marketplaces</h1>
+          <p class="font-light lg:text-xl text-gray-800 dark:text-gray-300">
+            Your customers are all over the place? Receive reviews from <strong>all localized stores</strong> and <strong>all marketplaces</strong>.
+          </p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <h1 class="mb-4 text-xl lg:text-3xl font-display font-bold tracking-tight text-gray-900 dark:text-white">Good-to-go in <mark>two minutes</mark></h1>
+          <p class="font-light lg:text-xl text-gray-800 dark:text-gray-300">
+            Designed to <strong>recover your time</strong>, not hog it. Set up your review sources in a breeze, then go off to the fun stuff!
+          </p>
+        </div>
       </div>
     </section>
-  </div>
+    <section class="bg-gray-800">
+      <div class="max-w-screen-xl py-20 lg:py-32 text-center font-bold text-3xl lg:text-5xl text-gray-300 tracking-tight mx-auto">
+        <span id="counter" class="inline-block w-24 lg:w-40 mr-5 leading-none pb-1 text-left">100,000</span> source refreshes <mark class="dimmed">since last midnight.</mark>
+      </div>
+    </section>
+    <section id="pricing" class="bg-white dark:bg-gray-900">
+        <div class="max-w-screen-xl px-4 py-12 mx-auto lg:py-24 lg:px-6">
+            <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+                <h2 class="mb-4 text-3xl font-display font-extrabold tracking-tight text-gray-900 dark:text-white">Leverage the tools you're already using</h2>
+                <p class="mb-8 font-light text-gray-800 sm:text-xl dark:text-gray-300">Reviewzap is designed to get out of your way and Just Work™. Get your reviews delivered right to your workspace and start wondering why you ever collected them by hand. And if you don't love it, our <strong>60 day money back guarantee</strong> has you covered!</p>
+            </div>
+            <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+                <!-- Pricing Card -->
+                <div class="flex flex-col max-w-lg py-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 dark:bg-gray-800 dark:text-white px-8 md:px-24 lg:px-8">
+                    <h3 class="mb-4 text-2xl font-extrabold font-display tracking-tight">Starter</h3>
+                    <p class="text-gray-400 sm:text-lg dark:text-gray-400">Start automating the boring stuff. Best for personal use or your side project.</p>
+                    <div class="flex items-baseline justify-center mt-8">
+                        <span class="mr-2 text-5xl font-extrabold">$19</span>
+                        <span class="text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <div class="mt-4 mb-8 text-sm text-gray-500">
+                      billed annually or $24 billed monthly
+                    </div>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left h-full">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Monitor 5 sources</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Weekly scorecard</span>
+                        </li>
+                    </ul>
+                    <a href="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center">
+                      Sign up for the Starter plan
+                      <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
+                        <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+                        </svg>
+                      </span>
+                    </a>
+                </div>
+                <!-- Pricing Card -->
+                <div class="flex flex-col max-w-lg py-6 mx-auto text-center text-gray-900 bg-gradient-to-br from-blue-600 to-sky-500 from-5% to-70% border border-gray-400 dark:border-gray-600 rounded-lg shadow-xl px-8 md:px-24 lg:px-8">
+                    <h3 class="mb-4 text-2xl text-gray-100 font-extrabold font-display tracking-tight">Business</h3>
+                    <p class="text-gray-200 sm:text-lg">Our most popular option. Best for your small or medium-sized company.</p>
+                    <div class="flex items-baseline justify-center mt-8">
+                        <span class="mr-2 text-white text-5xl font-extrabold">$69</span>
+                        <span class="text-gray-200" dark:text-gray-400>/month</span>
+                    </div>
+                    <div class="mt-4 mb-8 text-sm text-gray-300">
+                      billed annually or $84 billed monthly
+                    </div>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left h-full">
+                        <li class="flex items-center space-x-3 text-gray-100">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Monitor 20 sources</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-100">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Weekly scorecard</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-100">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Download reviews as CSV, JSON, or Excel file</span>
+                        </li>
+                    </ul>
+                    <a href="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center">
+                      Sign up for the Business plan
+                      <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
+                        <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+                        </svg>
+                      </span>
+                    </a>
+                </div>
+                <!-- Pricing Card -->
+                <div class="flex flex-col max-w-lg py-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 dark:bg-gray-800 dark:text-white px-8 md:px-24 lg:px-8">
+                    <h3 class="mb-4 text-2xl font-extrabold font-display tracking-tight">Enterprise</h3>
+                    <p class="text-gray-400 sm:text-lg dark:text-gray-400">Best for large companies and for tracking your competition.</p>
+                    <div class="flex items-baseline justify-center mt-8">
+                        <span class="mr-2 text-5xl font-extrabold">$399</span>
+                        <span class="text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <div class="mt-4 mb-8 text-sm text-gray-500">
+                      billed annually or $479 billed monthly
+                    </div>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Monitor 100 sources</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Weekly scorecard</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Additional sources at $2.99 per month</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Download reviews as CSV, JSON, or Excel file</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>API access and custom webhooks</span>
+                        </li>
+                    </ul>
+                    <a href="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center">
+                      Sign up for the Enterprise plan
+                      <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
+                        <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+                        </svg>
+                      </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-24 lg:px-6 ">
+            <h2 class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl dark:text-white">Frequently asked questions</h2>
+            <div class="max-w-screen-md mx-auto divide-y dark:divide-gray-800">
+              <details class="group text-gray-500 py-5">
+                <summary class="group-open:font-bold group-open:text-gray-900 dark:group-open:text-gray-100 list-none [&::-webkit-details-marker]:hidden group-open:mb-5 flex justify-between cursor-pointer transition-all">
+                  <span>What is a source?</span>
+                  <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </summary>
+                <p>
+                  A source is a single product or location at one review site. If you have an Android and an iOS version of your app, those are two sources. Your Amazon ASIN is a single source and includes all Amazon marketplaces.
+                </p>
+              </details>
+              <details class="group text-gray-500 py-5">
+                <summary class="group-open:font-bold group-open:text-gray-900 dark:group-open:text-gray-100 list-none [&::-webkit-details-marker]:hidden group-open:mb-5 flex justify-between cursor-pointer transition-all">
+                  <span>Am I limited to one Zap per source?</span>
+                  <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </summary>
+                  Nope! You can set up as many Zaps for the same source as you want. The only limitation on the number of Zaps is that of your Zapier plan.
+              </details>
+              <details class="group text-gray-500 py-5">
+                <summary class="group-open:font-bold group-open:text-gray-900 dark:group-open:text-gray-100 list-none [&::-webkit-details-marker]:hidden group-open:mb-5 flex justify-between cursor-pointer transition-all">
+                  <span>Which source sites can you collect reviews from?</span>
+                  <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </summary>
+                We currently collect reviews for apps in Apple's App Store and Google Play, for locations on Google Maps and Yelp, and for products on Amazon. If you're interested in reviews from other sources, just <a class="text-gray-900 dark:text-gray-200" href="mailto:support@reviewzap.io">shoot us an email</a> and we can probably add them!
+              </details>
+              <details class="group text-gray-500 py-5">
+                <summary class="group-open:font-bold group-open:text-gray-900 dark:group-open:text-gray-100 list-none [&::-webkit-details-marker]:hidden group-open:mb-5 flex justify-between cursor-pointer transition-all">
+                  <span>Can you add support for review site XYZ?</span>
+                  <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </summary>
+                Very likely! Just <a class="text-gray-900 dark:text-gray-200" href="mailto:support@reviewzap.io">shoot us an email</a> and we can probably sort it out quickly.
+              </details>
+              <details class="group text-gray-500 py-5">
+                <summary class="group-open:font-bold group-open:text-gray-900 dark:group-open:text-gray-100 list-none [&::-webkit-details-marker]:hidden group-open:mb-5 flex justify-between cursor-pointer transition-all">
+                  <span>Can I track my competition?</span>
+                  <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </summary>
+                Absolutely! We collect public reviews and do not require any API keys or other authorization for the review sites. So you can track reviews for your competitors' apps, products, and locations just like your own.
+              </details>
+              <details class="group text-gray-500 py-5">
+                <summary class="group-open:font-bold group-open:text-gray-900 dark:group-open:text-gray-100 list-none [&::-webkit-details-marker]:hidden group-open:mb-5 flex justify-between cursor-pointer transition-all">
+                  <span>Can I export all my reviews?</span>
+                  <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </summary>
+                Yes! If you're on the Business or Enterprise plan, you can download all the reviews you received during your Reviewzap subscription — plus, depending on the source, about ten to a few hundred older reviews — as JSON, CSV, or Excel file. This will soon be available through our web interface interface – for now, just <a class="text-gray-900 dark:text-gray-200" href="mailto:support@reviewzap.io">shoot us an email</a>!
+              </details>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-800">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+            <div class="max-w-screen-sm mx-auto text-center">
+              <h2 class="mb-4 text-2xl lg:text-3xl font-extrabold leading-tight tracking-tight text-gray-200">60 day <mark class="dimmed">money back guarantee</mark></h2>
+                <p class="mb-6 text-gray-300 dark:text-gray-400 md:text-lg">We’re so confident that you’ll love Reviewzap that we’re offering a 60 day money-back guarantee. If you’re unsatisfied for any reason, you can request a cancellation anytime within the first 60 days and we’ll refund your plan fees.</p>
+                  <a href="#pricing" class="group bg-gray-100 hover:bg-white text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
+                    Get started
+                    <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
+                      <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+                      </svg>
+                    </span>
+                  </a>
+            </div>
+        </div>
+    </section>
 
-</main>
+    {% include footer.html %}
+
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const counterSpan = document.getElementById('counter')
+        const counterInterval = 180;
+
+        const now = new Date();
+        const midnight = new Date(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate(),
+          0,
+          0,
+          0,
+        );
+
+        var reqCount = Math.floor((now - midnight) / counterInterval);
+
+        function updateCounter() {
+          counterSpan.innerHTML = (reqCount++).toLocaleString('en');
+        }
+
+        setInterval(updateCounter, counterInterval);
+      });
+    </script>
+  </body>
+</html>

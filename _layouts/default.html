@@ -1,15 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="icon" href="/img/icon.png">
-    <link rel="stylesheet" href="/css/pico.min.css">
-    <link rel="stylesheet" href="/css/reviewzap.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" sizes="any" href="/favicon.svg">
+
+    <meta name="msapplication-TileColor" content="#0ea5e9">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="/css/reviewzap.css" rel="stylesheet">
+
+    <style>
+      mark {
+        display: inline-block;
+        position: relative;
+        z-index: 0;
+        background: none;
+        color: unset;
+      }
+
+      mark::before {
+        content: "";
+        position: absolute;
+        left: 7%;
+        bottom: 0.02em;
+        width: 100%;
+        height: .3em;
+        transform: skew(-12deg) translateX(-8%);
+        background: #fb7185ff;
+        z-index: -1;
+      }
+
+      mark.dimmed::before {
+        opacity: 50%;
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-body">
     {% include nav.html %}
 
     {{ content }}
