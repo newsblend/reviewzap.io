@@ -64,6 +64,11 @@
     </style>
   </head>
   <body class="font-body">
+    <dialog id="launch" class="bg-gray-100 backdrop:bg-black/50 max-w-screen-sm py-8 shadow-lg rounded-lg">
+      <h2 class="font-display text-slate-700 text-3xl tracking-tight mb-4 px-4">The missing email trigger for our launch!</h2>
+      <p class="px-4 text-slate-700">We will open Reviewzap to the public in mid-June. Add your email address below and we'll notify you as soon as you can set up your Zaps.</p>
+      <iframe src="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="w-full h-[340px]"></iframe>
+    </dialog>
     <section class="bg-gradient-to-br from-blue-600 to-sky-500 from-5% to-70% py-5">
         <nav>
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
@@ -73,7 +78,7 @@
                 </a>
                 <div class="flex gap-6 md:gap-12 items-center">
                   <a href="#pricing" class="text-gray-200 transition hover:text-white">Pricing</a>
-                  <a href="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="text-gray-200 transition hover:text-white">Sign in</a>
+                  <a href="#!" class="text-gray-200 transition hover:text-white" onclick="openModal('launch')">Sign in</a>
                   <a href="#pricing" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold py-2 px-4 rounded-full inline-flex items-center">
                     Get started
                     <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
@@ -177,7 +182,7 @@
                             <span>Weekly scorecard</span>
                         </li>
                     </ul>
-                    <a href="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center">
+                    <a href="#!" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal('launch')">
                       Sign up for the Starter plan
                       <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
                         <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -215,7 +220,7 @@
                             <span>Download reviews as CSV, JSON, or Excel file</span>
                         </li>
                     </ul>
-                    <a href="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center">
+                    <a href="#!" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal('launch')">
                       Sign up for the Business plan
                       <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
                         <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +268,7 @@
                             <span>API access and custom webhooks</span>
                         </li>
                     </ul>
-                    <a href="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center">
+                    <a href="#!" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal('launch')">
                       Sign up for the Enterprise plan
                       <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
                         <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -371,6 +376,21 @@
 
         setInterval(updateCounter, counterInterval);
       });
+    </script>
+    <script>
+      window.openModal = (id) => {
+        const modal = document.getElementById(id);
+        modal.showModal();
+        modal.addEventListener(
+          'click',
+          (event) => {
+            var rect = modal.getBoundingClientRect();
+            var isInDialog=(rect.top <= event.clientY && event.clientY <= rect.top + rect.height
+              && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+            if (!isInDialog) modal.close();
+          },
+        );
+      };
     </script>
   </body>
 </html>
