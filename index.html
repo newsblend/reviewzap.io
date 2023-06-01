@@ -64,10 +64,129 @@
     </style>
   </head>
   <body class="font-body">
-    <dialog id="launch" class="bg-gray-100 backdrop:bg-black/50 max-w-screen-sm py-8 shadow-lg rounded-lg">
+    <dialog id="launch" class="bg-gray-50 backdrop:bg-black/50 max-w-screen-sm py-8 shadow-lg rounded-lg md:px-24 px-0">
       <h2 class="font-display text-slate-700 text-3xl tracking-tight mb-4 px-4">The missing email trigger for our launch!</h2>
       <p class="px-4 text-slate-700">We will open Reviewzap to the public in mid-June. Add your email address below and we'll notify you as soon as you can set up your Zaps.</p>
       <iframe src="https://cdn.forms-content.sg-form.com/1aff3775-fc6d-11ed-9259-ca2d1157a474" class="w-full h-[340px]"></iframe>
+    </dialog>
+    <dialog id="signup-free" class="bg-gray-50 backdrop:bg-black/50 max-w-screen-sm p-8 shadow-lg rounded-lg mx-2 md:mx-auto md:px-24 text-center">
+      <h2 class="font-display text-slate-700 text-3xl tracking-tight mb-6">Sign up for Reviewzap</h2>
+      <p class="text-slate-700 md:text-lg mt-4">
+        Thank you so much for choosing Reviewzap, your review triggers are just two minutes away!</p>
+      <p class="text-slate-700 md:text-lg mt-4">
+        Use the button below to create an account. After completing the checkout, you'll receive an email to set a password and access your dashboard.</p>
+      </p>
+      <div class="flex flex-col gap-2 justify-between items-center mt-8">
+      <a href="#" class="group bg-gray-800 hover:bg-black text-gray-100 font-bold py-3 px-6 rounded-full inline-flex items-center" onclick="replaceModal(event, 'launch')" pirsch-event="Checkout: Free">
+        Create account
+        <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
+          <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+          </svg>
+        </span>
+      </a>
+      </div>
+      <p class="text-sm text-slate-500 mt-8 text-center">
+        Our <a href="/terms/" class="text-sky-700 hover:text-sky-900">Terms and Conditions</a> and <a href="/privacy/" class="text-sky-700 hover:text-sky-900">Privacy Policy</a> apply to all our services.
+      </p>
+    </dialog>
+    <dialog id="signup-starter" class="bg-gray-50 backdrop:bg-black/50 max-w-screen-sm p-8 shadow-lg rounded-lg mx-2 md:mx-auto md:px-24 text-center">
+      <h2 class="font-display text-slate-700 text-3xl tracking-tight mb-6">Sign up for Reviewzap</h2>
+      <p class="text-slate-700 md:text-lg mt-4">
+        Thank you so much for choosing Reviewzap, your review triggers are just two minutes away!</p>
+      <p class="text-slate-700 md:text-lg mt-4">
+        Please choose your preferred billing cycle for the <strong>Starter</strong> plan below. After completing the checkout, you'll receive an email to set a password and access your dashboard.</p>
+      </p>
+      <div class="flex flex-col gap-2 justify-between items-center mt-8">
+      <a href="#" class="group bg-gray-800 hover:bg-black text-gray-100 font-bold py-3 px-6 rounded-full inline-flex items-center" onclick="replaceModal(event, 'launch')" pirsch-event="Checkout: Starter (annually)">
+        Bill annually at $19 / month
+        <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
+          <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+          </svg>
+        </span>
+      </a>
+      <span class="text-slate-500">or</span>
+      <a href="#" class="group bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold rounded-full px-6 py-3 text-center inline-flex items-center justify-center" onclick="replaceModal(event, 'launch')" pirsch-event="Checkout: Starter (monthly)">
+        Bill monthly at $24 / month
+        <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
+          <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+          </svg>
+        </span>
+      </a>
+      </div>
+      <p class="text-sm text-slate-500 mt-8 text-center">
+        Our <a href="/terms/" class="text-sky-700 hover:text-sky-900">Terms and Conditions</a> and <a href="/privacy/" class="text-sky-700 hover:text-sky-900">Privacy Policy</a> apply to all our services.
+      </p>
+    </dialog>
+    <dialog id="signup-business" class="bg-gray-50 backdrop:bg-black/50 max-w-screen-sm p-8 shadow-lg rounded-lg mx-2 md:mx-auto md:px-24 text-center">
+      <h2 class="font-display text-slate-700 text-3xl tracking-tight mb-6">Sign up for Reviewzap</h2>
+      <p class="text-slate-700 md:text-lg mt-4">
+        Thank you so much for choosing Reviewzap, your review triggers are just two minutes away!</p>
+      <p class="text-slate-700 md:text-lg mt-4">
+        Please choose your preferred billing cycle for the <strong>Business</strong> plan below. After completing the checkout, you'll receive an email to set a password and access your dashboard.</p>
+      </p>
+      <div class="flex flex-col gap-2 justify-between items-center mt-8">
+      <a href="#" class="group bg-gray-800 hover:bg-black text-gray-100 font-bold py-3 px-6 rounded-full inline-flex items-center" onclick="replaceModal(event, 'launch')" pirsch-event="Checkout: Business (annually)">
+        Bill annually at $69 / month
+        <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
+          <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+          </svg>
+        </span>
+      </a>
+      <span class="text-slate-500">or</span>
+      <a href="#" class="group bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold rounded-full px-6 py-3 text-center inline-flex items-center justify-center" onclick="replaceModal(event, 'launch')" pirsch-event="Checkout: Business (monthly)">
+        Bill monthly at $84 / month
+        <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
+          <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+          </svg>
+        </span>
+      </a>
+      </div>
+      <p class="text-sm text-slate-500 mt-8 text-center">
+        Our <a href="/terms/" class="text-sky-700 hover:text-sky-900">Terms and Conditions</a> and <a href="/privacy/" class="text-sky-700 hover:text-sky-900">Privacy Policy</a> apply to all our services.
+      </p>
+    </dialog>
+    <dialog id="signup-enterprise" class="bg-gray-50 backdrop:bg-black/50 max-w-screen-sm p-8 shadow-lg rounded-lg mx-2 md:mx-auto md:px-24 text-center">
+      <h2 class="font-display text-slate-700 text-3xl tracking-tight mb-6">Sign up for Reviewzap</h2>
+      <p class="text-slate-700 md:text-lg mt-4">
+        Thank you so much for choosing Reviewzap, your review triggers are just two minutes away!</p>
+      <p class="text-slate-700 md:text-lg mt-4">
+        Please choose your preferred billing cycle for the <strong>Enterprise</strong> plan below. After completing the checkout, you'll receive an email to set a password and access your dashboard.</p>
+      </p>
+      <div class="flex flex-col gap-2 justify-between items-center mt-8">
+      <a href="#" class="group bg-gray-800 hover:bg-black text-gray-100 font-bold py-3 px-6 rounded-full inline-flex items-center" onclick="replaceModal(event, 'launch')" pirsch-event="Checkout: Enterprise (annually)">
+        Bill annually at $399 / month
+        <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
+          <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+          </svg>
+        </span>
+      </a>
+      <span class="text-slate-500">or</span>
+      <a href="#" class="group bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold rounded-full px-6 py-3 text-center inline-flex items-center justify-center" onclick="replaceModal(event, 'launch')" pirsch-event="Checkout: Enterprise (monthly)">
+        Bill monthly at $479 / month
+        <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
+          <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.002h7.586L6.293 8.295a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.416l-4-4a1 1 0 0 0-1.414 1.416l2.293 2.293H1a1 1 0 1 0 0 2Z"></path>
+          </svg>
+        </span>
+      </a>
+      </div>
+      <p class="text-sm text-slate-500 mt-8 text-center">
+        Our <a href="/terms/" class="text-sky-700 hover:text-sky-900">Terms and Conditions</a> and <a href="/privacy/" class="text-sky-700 hover:text-sky-900">Privacy Policy</a> apply to all our services.
+      </p>
+    </dialog>
+    <dialog id="success" class="bg-gray-50 backdrop:bg-black/50 max-w-screen-sm py-8 shadow-lg rounded-lg md:px-24 px-0 text-center">
+      <svg class="text-green-600 fill-current mx-auto mt-4 mb-8" width="80" height="80" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM22.386 10.146l-9.388 9.446-4.228-4.227c-0.39-0.39-1.024-0.39-1.415 0s-0.391 1.023 0 1.414l4.95 4.95c0.39 0.39 1.024 0.39 1.415 0 0.045-0.045 0.084-0.094 0.119-0.145l9.962-10.024c0.39-0.39 0.39-1.024 0-1.415s-1.024-0.39-1.415 0z"></path>
+      </svg>
+      <h2 class="font-display text-slate-700 text-3xl tracking-tight mb-4 px-4">Check your inbox!</h2>
+      <p class="px-4 mb-4 text-slate-700 md:text-lg">We're psyched to onboard you to Reviewzap! Please check your inbox. We sent you a link allowing you to set a password and access your dashboard.</p>
+      <p class="px-4 text-slate-700 md:text-lg">If your email does not arrive within the next five minutes, please check the spam folder, and reach out to us at <a href="mailto:support@reviewzap.io" class="text-sky-700 hover:text-sky-900">support@reviewzap.io</a> if it's not there!</p>
     </dialog>
     <section class="bg-gradient-to-br from-blue-600 to-sky-500 from-5% to-70% py-5">
         <nav>
@@ -78,7 +197,7 @@
                 </a>
                 <div class="flex gap-6 md:gap-12 items-center">
                   <a href="#pricing" class="text-gray-200 transition hover:text-white">Pricing</a>
-                  <a href="#!" class="text-gray-200 transition hover:text-white" onclick="openModal('launch')">Sign in</a>
+                  <a href="#" class="text-gray-200 transition hover:text-white" onclick="openModal(event, 'launch')" pirsch-event="Sign in">Sign in</a>
                   <a href="#pricing" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold py-2 px-4 rounded-full inline-flex items-center">
                     Get started
                     <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
@@ -151,8 +270,8 @@
         <span id="counter" class="inline-block w-24 lg:w-40 mr-5 leading-none pb-1 text-left">100,000</span> source refreshes <mark class="dimmed">since last midnight.</mark>
       </div>
     </section>
-    <section id="pricing" class="bg-white dark:bg-gray-900">
-        <div class="max-w-screen-xl px-4 py-12 mx-auto lg:py-24 lg:px-6">
+    <section id="pricing" class="bg-white dark:bg-gray-900 py-12 lg:py-24">
+        <div class="max-w-screen-xl px-4 mx-auto lg:px-6 mb-8 lg:mb-12">
             <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
                 <h2 class="mb-4 text-3xl font-display font-extrabold tracking-tight text-gray-900 dark:text-white">Leverage the tools you're already using</h2>
                 <p class="mb-8 font-light text-gray-800 sm:text-xl dark:text-gray-300">Reviewzap is designed to get out of your way and Just Work™. Get your reviews delivered right to your workspace and start wondering why you ever collected them by hand. And if you don't love it, our <strong>60 day money back guarantee</strong> has you covered!</p>
@@ -182,7 +301,7 @@
                             <span>Weekly scorecard</span>
                         </li>
                     </ul>
-                    <a href="#!" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal('launch')">
+                    <a href="#" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal(event, 'signup-starter')" pirsch-event="Modal: Starter plan">
                       Sign up for the Starter plan
                       <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
                         <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -220,7 +339,7 @@
                             <span>Download reviews as CSV, JSON, or Excel file</span>
                         </li>
                     </ul>
-                    <a href="#!" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal('launch')">
+                    <a href="#" class="group bg-gray-800 hover:bg-gray-900 text-gray-100 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal(event, 'signup-business')" pirsch-event="Modal: Business plan">
                       Sign up for the Business plan
                       <span class="ml-2 text-sky-500 transition group-hover:translate-x-0.5">
                         <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -255,7 +374,7 @@
                         <li class="flex items-center space-x-3">
                             <!-- Icon -->
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Additional sources at $2.99 per month</span>
+                            <span>Additional sources at $3 per month</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <!-- Icon -->
@@ -268,7 +387,7 @@
                             <span>API access and custom webhooks</span>
                         </li>
                     </ul>
-                    <a href="#!" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal('launch')">
+                    <a href="#" class="group bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100 text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 font-bold rounded-full px-5 py-2.5 text-center inline-flex items-center justify-center" onclick="openModal(event, 'signup-enterprise')" pirsch-event="Modal: Enterprise plan">
                       Sign up for the Enterprise plan
                       <span class="ml-2 text-sky-600 transition group-hover:translate-x-0.5">
                         <svg class="fill-current" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -278,6 +397,9 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="max-w-screen-md mx-auto text-center">
+          <p class="font-light text-gray-700 dark:text-gray-300">Still on the fence? Track one source at a reduced refresh rate with our <a href="#" class="text-sky-700 hover:text-sky-900 dark:text-sky-500 dark:hover:text-sky-300" onclick="openModal(event, 'signup-free')" pirsch-event="Modal: Free plan">Free Plan</a>.</p>
         </div>
       </section>
     <section class="bg-white dark:bg-gray-900">
@@ -305,14 +427,14 @@
                   <span>Which source sites can you collect reviews from?</span>
                   <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </summary>
-                We currently collect reviews for apps in Apple's App Store and Google Play, for locations on Google Maps and Yelp, and for products on Amazon. If you're interested in reviews from other sources, just <a class="text-gray-900 dark:text-gray-200" href="mailto:support@reviewzap.io">shoot us an email</a> and we can probably add them!
+                We currently collect reviews for apps in Apple's App Store and Google Play, for locations on Google Maps and Yelp, and for products on Amazon. If you're interested in reviews from other sources, just <a href="mailto:support@reviewzap.io" class="text-gray-900 dark:text-gray-200">shoot us an email</a> and we can probably add them!
               </details>
               <details class="group text-gray-500 py-5">
                 <summary class="group-open:font-bold group-open:text-gray-900 dark:group-open:text-gray-100 list-none [&::-webkit-details-marker]:hidden group-open:mb-5 flex justify-between cursor-pointer transition-all">
                   <span>Can you add support for review site XYZ?</span>
                   <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </summary>
-                Very likely! Just <a class="text-gray-900 dark:text-gray-200" href="mailto:support@reviewzap.io">shoot us an email</a> and we can probably sort it out quickly.
+                Very likely! Just <a href="mailto:support@reviewzap.io" class="text-gray-900 dark:text-gray-200">shoot us an email</a> and we can probably sort it out quickly.
               </details>
               <details class="group text-gray-500 py-5">
                 <summary class="group-open:font-bold group-open:text-gray-900 dark:group-open:text-gray-100 list-none [&::-webkit-details-marker]:hidden group-open:mb-5 flex justify-between cursor-pointer transition-all">
@@ -326,7 +448,7 @@
                   <span>Can I export all my reviews?</span>
                   <svg class="w-6 h-6 group-open:rotate-180 shrink-0 transition" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </summary>
-                Yes! If you're on the Business or Enterprise plan, you can download all the reviews you received during your Reviewzap subscription — plus, depending on the source, about ten to a few hundred older reviews — as JSON, CSV, or Excel file. This will soon be available through our web interface interface – for now, just <a class="text-gray-900 dark:text-gray-200" href="mailto:support@reviewzap.io">shoot us an email</a>!
+                Yes! If you're on the Business or Enterprise plan, you can download all the reviews you received during your Reviewzap subscription — plus, depending on the source, about ten to a few hundred older reviews — as JSON, CSV, or Excel file. This will soon be available through our web interface interface – for now, just <a href="mailto:support@reviewzap.io" class="text-gray-900 dark:text-gray-200">shoot us an email</a>!
               </details>
             </div>
         </div>
@@ -378,9 +500,10 @@
       });
     </script>
     <script>
-      window.openModal = (id) => {
+      window.openModal = (event, id) => {
         const modal = document.getElementById(id);
         modal.showModal();
+        document.activeElement.blur();
         modal.addEventListener(
           'click',
           (event) => {
@@ -390,7 +513,20 @@
             if (!isInDialog) modal.close();
           },
         );
+        event.preventDefault();
       };
+
+      window.closeParentModal = (event) => {
+        event.target.closest('dialog').close();
+        event.preventDefault();
+      };
+
+      window.replaceModal = (event, id) => {
+        closeParentModal(event);
+        openModal(event, id);
+      };
+
+      window.openSuccessModal = () => { openModal(null, 'success') };
     </script>
   </body>
 </html>
